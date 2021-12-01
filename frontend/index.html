@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Donations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Donatations for charities</h1>
+        <form onclick='return false' class="fomr-donations">
+        
+        <div class="form-group">
+            <label for="charity">Charities</label>
+            <select name="charity" id="charity">
+                <option value="animalrescue"> animal rescue</option>
+                <option value="redcross">red cross</option>
+                <option value="greenpeace"> greepeace</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="currency">currency</label>
+            <select name="currency" id="currency">
+                <option value="gbp">british pounds</option>
+                <option value="eur">euroes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="donation">donation</label>
+            <input type="number" name="donation" id="donation" values='50.0' step="0.01">
+        </div>
+
+        <button>donate</button>
+        </form>
+    </div>
+    <script src="https://js.stripe.com/v3/" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
